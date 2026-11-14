@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="42%" r="75%">
+      <stop offset="0" stop-color="#2D1F56"/>
+      <stop offset="0.6" stop-color="#1A1336"/>
+      <stop offset="1" stop-color="#0C091A"/>
+    </radialGradient>
+    <linearGradient id="gold" gradientUnits="userSpaceOnUse" x1="0" y1="96" x2="0" y2="434">
+      <stop offset="0" stop-color="#FFEAAE"/>
+      <stop offset="0.55" stop-color="#F4C25C"/>
+      <stop offset="1" stop-color="#DB8F27"/>
+    </linearGradient>
+    <linearGradient id="elixir" gradientUnits="userSpaceOnUse" x1="130" y1="280" x2="400" y2="430">
+      <stop offset="0" stop-color="#45F3CB"/>
+      <stop offset="0.55" stop-color="#6E8BFF"/>
+      <stop offset="1" stop-color="#9466FF"/>
+    </linearGradient>
+    <linearGradient id="depth" gradientUnits="userSpaceOnUse" x1="0" y1="300" x2="0" y2="424">
+      <stop offset="0" stop-color="#0C091A" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0C091A" stop-opacity="0.3"/>
+    </linearGradient>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="36"/></filter>
+    <filter id="soft" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="10"/></filter>
+    <clipPath id="inside">
+      <path d="M 222 110 V 210 L 117 386 Q 95 424 139 424 H 373 Q 417 424 395 386 L 290 210 V 110 Z"/>
+    </clipPath>
+  </defs>
+
+  <rect width="512" height="512" fill="url(#bg)"/>
+
+  <g transform="translate(256 256) scale(1.06) translate(-256 -264)">
+    <!-- glow from the elixir -->
+    <ellipse cx="256" cy="362" rx="160" ry="92" fill="#7C5CFF" opacity="0.5" filter="url(#blur)"/>
+
+    <!-- elixir -->
+    <g clip-path="url(#inside)">
+      <path d="M 92 286 Q 133 266 174 286 T 256 286 T 338 286 T 420 286 V 440 H 92 Z" fill="url(#elixir)"/>
+      <path d="M 92 286 Q 133 266 174 286 T 256 286 T 338 286 T 420 286 V 440 H 92 Z" fill="url(#depth)"/>
+      <path d="M 92 286 Q 133 266 174 286 T 256 286 T 338 286 T 420 286" fill="none"
+            stroke="#C8FFF2" stroke-opacity="0.75" stroke-width="5"/>
+    </g>
+
+    <!-- </> -->
+    <g fill="none" stroke="#130D29" stroke-width="18" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M 212 320 L 178 354 L 212 388"/>
+      <path d="M 300 320 L 334 354 L 300 388"/>
+      <path d="M 270 312 L 242 396"/>
+    </g>
+
+    <!-- rising bubbles -->
+    <g fill="none" stroke="#45F3CB" stroke-width="5">
+      <circle cx="258" cy="252" r="9"/>
+      <circle cx="244" cy="210" r="6.5"/>
+      <circle cx="262" cy="170" r="5"/>
+    </g>
+    <circle cx="250" cy="138" r="3" fill="#45F3CB"/>
+
+    <!-- glass shine -->
+    <path d="M 226 242 L 207 274" stroke="#FFFFFF" stroke-opacity="0.32" stroke-width="8" stroke-linecap="round"/>
+
+    <!-- flask -->
+    <path d="M 222 110 V 210 L 117 386 Q 95 424 139 424 H 373 Q 417 424 395 386 L 290 210 V 110"
+          fill="none" stroke="url(#gold)" stroke-width="20" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M 198 106 H 314" stroke="url(#gold)" stroke-width="22" stroke-linecap="round"/>
+
+    <!-- sparkles -->
+    <circle cx="384" cy="144" r="20" fill="#FFE59A" opacity="0.35" filter="url(#soft)"/>
+    <g fill="#FFEAAE">
+      <path d="M 384 110 Q 388 140 414 144 Q 388 148 384 178 Q 380 148 354 144 Q 380 140 384 110 Z"/>
+      <path d="M 132 168 Q 135 186 150 188 Q 135 190 132 208 Q 129 190 114 188 Q 129 186 132 168 Z"/>
+      <path d="M 410 222 Q 412 232 420 233 Q 412 234 410 244 Q 408 234 400 233 Q 408 232 410 222 Z"/>
+    </g>
+  </g>
+</svg>
